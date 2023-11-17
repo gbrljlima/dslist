@@ -20,11 +20,15 @@ public class Game {
 	
 	@Column(name = "game_year")
 	private Integer year;
-	private String gente;
+	private String genre;
 	private String platforms;
 	private Double score;
 	private String imgUrl;
+	
+	@Column(columnDefinition = "TEXT")
 	private String shortDescription;
+	
+	@Column(columnDefinition = "TEXT")
 	private String longDescription;
 	
 	public Game() {
@@ -36,7 +40,7 @@ public class Game {
 		this.id = id;
 		this.title = title;
 		this.year = year;
-		this.gente = gente;
+		this.genre = gente;
 		this.platforms = platforms;
 		this.score = score;
 		this.imgUrl = imgUrl;
@@ -69,11 +73,11 @@ public class Game {
 	}
 
 	public String getGente() {
-		return gente;
+		return genre;
 	}
 
 	public void setGente(String gente) {
-		this.gente = gente;
+		this.genre = gente;
 	}
 
 	public String getPlatforms() {
